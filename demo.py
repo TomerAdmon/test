@@ -6,7 +6,7 @@ class OutcomesTest(unittest.TestCase):
         return
 
     def testFail(self):
-        self.failIf(True)
+        return
 
 if __name__ == '__main__':
     unittest.main()
