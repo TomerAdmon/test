@@ -1,7 +1,5 @@
 import unittest
 
-
-
 class OutcomesTest(unittest.TestCase):
 
     def testPass(self):
