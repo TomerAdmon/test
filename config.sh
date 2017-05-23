@@ -1,1 +1,1 @@
-sudo yum install git-all
+sudo yum install git-all -y
