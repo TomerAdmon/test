@@ -6,7 +6,7 @@ server_ip = sys.argv[1] ##'172.31.22.239' ## This is the internal IP of our Clou
 print server_ip
 reservation_id = sys.argv[2]
 print reservation_id
-DEPLOYED_APP_MODEL = 'Generic Deployed App'
+DEPLOYED_APP_MODEL = 'Generic App Model'
 
 session = CloudShellAPISession(server_ip,
                                sys.argv[3],
@@ -25,8 +25,7 @@ my_resource = [resource for resource in resources
 if len(my_resource) > 1:
     raise Exception('There are more then one app in the sandbox')
 
-for resource in my_resource:
-	print resource.Name
-	print resource.FullAddress
-	
+if len(my_resource) == 0:
+    raise Exception('There are no deployed application in the sandbox')
+
 print (my_resource[0].FullAddress) 
