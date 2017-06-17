@@ -18,10 +18,15 @@ resources = session.GetReservationDetails(reservation_id).ReservationDescription
 
 print str(len(resources))
 
+
 my_resource = [resource for resource in resources
                if resource.ResourceModelName == DEPLOYED_APP_MODEL]
 
 if len(my_resource) > 1:
     raise Exception('There are more then one app in the sandbox')
 
+for resource in my_resource:
+	print resource.Name
+	print resource.FullAddress
+	
 print (my_resource[0].FullAddress) 
