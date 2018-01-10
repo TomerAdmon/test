@@ -3,5 +3,5 @@ import sys
 
 session = CloudShellAPISession("10.0.0.55",
                                "admin",
-                               "admin",
+                               sys.argv[1],
                                "Global")  ##make sure 
